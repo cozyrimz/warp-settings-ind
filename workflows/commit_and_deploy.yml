@@ -1,0 +1,25 @@
+---
+name: Ready a branch to push and deploy via git
+command: |-
+  git checkout {{branch_name}}
+  git rebase origin/master
+  git push --no-verify --force origin {{branch_name}}
+  git checkout -b qa/{{date}}_{{num}}
+  git push -u origin qa/{{date}}_{{num}}
+tags:
+  - git
+  - deploy
+description: 'Checkout a branch, rebase it with master, push it, and create and push a qa branch'
+arguments:
+  - name: branch_name
+    description: The name of the branch in question
+    default_value: jira/TIME-
+  - name: date
+    description: The date in the format YYYY_MM_DD
+    default_value: 2023_0M_DD
+  - name: num
+    description: The number for the qa branch usually for uniqueness if multiple deploys are done per day
+    default_value: 1
+author: Sarim Shah
+author_url: 'https://github.com/cozyrimz'
+shells: []

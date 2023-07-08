@@ -1,0 +1,11 @@
+---
+name: Resolve Mac Local DNS Issue
+command: "sudo brew services stop dnsmasq ; sudo brew services start dnsmasq &&
+docker rm -f hobo-consul && consul-start && 
+sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder; sudo killall mDNSResponderHelper"
+tags:
+  - dns
+description: "Resolve Mac Localhost DNS issue"
+author: Sarim Shah
+author_url: "https://github.com/cozyrimz"
+shells: []

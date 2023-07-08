@@ -1,0 +1,16 @@
+---
+name: Go to Repo & Open in VSCode
+command: 'cd ~/indeed/{{repo_folder_name}} && code .'
+tags:
+  - code
+  - indeed
+  - repo
+  - vscode
+description: 'Navigate to time backend'
+author: Sarim Shah
+arguments:
+  - name: repo_folder_name
+    description: The name of the repository folder file that the git repo is in
+    default_value: time-backend
+author_url: 'https://github.com/cozyrimz'
+shells: []

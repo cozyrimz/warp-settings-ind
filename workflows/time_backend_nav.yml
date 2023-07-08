@@ -1,0 +1,11 @@
+---
+name: Go to Time Backend & Open in VSCode
+command: 'cd ~/indeed/time-backend && code .'
+tags:
+  - code
+  - time-backend
+  - repo
+description: 'Navigate to time backend'
+author: Sarim Shah
+author_url: 'https://github.com/cozyrimz'
+shells: []

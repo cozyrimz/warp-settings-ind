@@ -1,0 +1,12 @@
+---
+name: Start Time Backend Resources
+tags:
+  - code
+  - timebackend
+  - repo
+  - build
+command: 'cd ~/indeed/time-backend && hobo-control --resolvedep start resource'
+description: 'Navigate to Time-backend and start its resources'
+author: Sarim Shah
+author_url: 'https://github.com/cozyrimz'
+shells: []
